@@ -1,5 +1,5 @@
 {
-  "name": "rtkify",
+  "name": "@arthur-fontaine/rtkify",
   "version": "1.0.0",
   "type": "module",
   "description": "AST-based Bash rewriter for rtk, with binary path normalization and support for chained commands.",
