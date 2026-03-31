@@ -6,6 +6,9 @@
   "bin": {
     "rtkify": "./dist/index.mjs"
   },
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
