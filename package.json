@@ -1,13 +1,22 @@
 {
   "name": "rtkify",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "type": "module",
+  "description": "AST-based Bash rewriter for rtk, with binary path normalization and support for chained commands.",
+  "bin": {
+    "rtkify": "./dist/index.mjs"
   },
-  "keywords": [],
-  "author": "",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "build": "tsdown --dts"
+  },
+  "keywords": ["rtk"],
+  "author": {
+    "name": "Arthur Fontaine",
+    "url": "https://github.com/arthur-fontaine"
+  },
+  "homepage": "https://github.com/arthur-fontaine/rtkify",
   "license": "ISC",
   "packageManager": "pnpm@10.33.0",
   "dependencies": {
@@ -20,6 +29,7 @@
     "@tsconfig/node24": "^24.0.4",
     "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^25.5.0",
+    "tsdown": "^0.21.7",
     "typescript": "^6.0.2"
   }
 }

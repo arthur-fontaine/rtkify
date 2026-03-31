@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { spawnSync } from 'node:child_process'
 import path from 'node:path'
 import os from 'node:os'
@@ -122,7 +124,6 @@ export { rtkify }
     } else if (typeof module !== 'undefined') {
       return module === (globalThis as any).module;
     } else {
-      // @ts-expect-error import.meta is only available in ES modules
       const currentFile = fileURLToPath(import.meta.url);
       const entryFile = process.argv[1] && path.resolve(process.argv[1]);
       return currentFile === entryFile;
