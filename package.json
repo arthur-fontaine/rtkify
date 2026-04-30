@@ -12,7 +12,9 @@
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
-    "build": "tsdown --dts"
+    "build": "tsdown --dts",
+    "prepare": "npm run build",
+    "test": "pnpm build && node --test test/*.mjs"
   },
   "keywords": ["rtk"],
   "author": {

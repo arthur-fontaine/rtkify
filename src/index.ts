@@ -93,9 +93,9 @@ class Rtkify {
 
     const rewrittenCommandResult = spawnSync('rtk', ['rewrite', commandStr], { encoding: 'utf-8' });
 
-    if (rewrittenCommandResult.status !== 0) return commandStr;
-
     const rewrittenCommand = rewrittenCommandResult.stdout.trim();
+
+    if (rewrittenCommandResult.status !== 0 && rewrittenCommandResult.status !== 3) return commandStr;
     return rewrittenCommand || commandStr;
   }
 
